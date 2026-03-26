@@ -26,8 +26,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 16px 8px;
     background-color: #fff;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
     box-shadow: #ddd 0px 4px 8px;
     position: fixed;
     bottom: 5px;
@@ -65,12 +67,84 @@ li {
     text-align: center;
     font-size: 14px;
     gap: 5px;
-    background-color: #f0f0f0;
     padding: 10px;
+}
+
+.linha1-color,
+.linha2-color,
+.linha3-color,
+.circular-color {
+    border: 1px solid #ddd;
     border-radius: 10px;
+}
+
+.linha1-color {
+    background-color: #E1FAAE;
+}
+
+.linha2-color {
+    background-color: #AFE6EA;
+}
+
+.linha3-color {
+    background-color: #AECFFF;
+}
+
+.circular-color {
+    background-color: #FFFFFF;
 }
 
 li img {
     width: 50px;
     height: auto;
 }
+
+h2 {
+    font-size: 18px;
+    margin: 15px;
+}
+
+.infor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+}
+
+.infor-container p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 14px;
+    margin-bottom: 10px
+}
+
+.l1-block,
+.l2-block,
+.l3-block,
+.circular-block {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+
+.l-start {
+    background-color: #F87314;
+    padding: 15px;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.l-end {
+    background-color: #FFFFFF;
+    padding: 15px;
+    color: #F87314;
+    border-radius: 10px;
+}
+
