@@ -1,27 +1,83 @@
- // Centralizando em Penedo
-  var map = L.map('map').setView([-10.2903, -36.5864], 14);
+// ===============================
+// MAPA
+// ===============================
+const map = L.map('map').setView([-10.2903, -36.5864], 14);
 
-  // Mapa do OpenStreetMap
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap'
-  }).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap'
+}).addTo(map);
 
-  // Exemplo de rota de ônibus
-  var rota = [
-    [-10.292164, -36.585377],
-    [-10.291663, -36.585749],
-    [-10.291163, -36.585108],
-    [-10.290741, -36.584581],
-    [-10.290027, -36.583657],
-    [-10.289298, -36.584047]
-  ];
+// ===============================
+// CONTROLE DE CAMADA ATIVA
+// ===============================
+let camadaAtiva = null;
 
-  // Desenhar linha
-  var linha = L.polyline(rota, {color: 'blue'}).addTo(map);
+// ===============================
+// FUNÇÃO PARA CARREGAR ROTA
+// ===============================
+function carregarRota(url, estilo) {
+  fetch(url)
+    .then(res => {
+      if (!res.ok) {
+        throw new Error("Erro ao carregar o arquivo: " + url);
+      }
+      return res.json();
+    })
+    .then(dados => {
 
-  // Marcadores (paradas)
-  rota.forEach(p => {
-    L.marker(p).addTo(map);
+      // remove a rota anterior
+      if (camadaAtiva) {
+        map.removeLayer(camadaAtiva);
+      }
+
+      // cria nova camada
+      const camada = L.geoJSON(dados, {
+        style: estilo
+      });
+
+      // adiciona no mapa
+      camada.addTo(map);
+
+      // ajusta zoom automaticamente
+      map.fitBounds(camada.getBounds());
+
+      // salva como ativa
+      camadaAtiva = camada;
+    })
+    .catch(err => {
+      console.error("Erro:", err);
+      alert("Erro ao carregar a rota. Veja o console (F12).");
+    });
+}
+
+// ===============================
+// BOTÕES
+// ===============================
+document.getElementById('btnLinha1').addEventListener('click', () => {
+  carregarRota('rotas/linha1.json', {
+    color: 'blue',
+    weight: 4
   });
+});
 
-  map.fitBounds(linha.getBounds());
+document.getElementById('btnLinha2').addEventListener('click', () => {
+  carregarRota('rotas/linha2.json', {
+    color: 'red',
+    weight: 4
+  });
+});
+
+document.getElementById('btnLinha3').addEventListener('click', () => {
+  carregarRota('rotas/linha3.json', {
+    color: 'green',
+    weight: 4
+  });
+});
+
+document.getElementById('btnCircular').addEventListener('click', () => {
+  carregarRota('rotas/circular.json', {
+    color: 'orange',
+    weight: 4,
+    dashArray: '8, 6'
+  });
+});

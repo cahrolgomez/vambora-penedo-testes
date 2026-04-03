@@ -70,27 +70,28 @@ li {
     padding: 10px;
 }
 
-.linha1-color,
-.linha2-color,
-.linha3-color,
-.circular-color {
+#btnLinha1,
+#btnLinha2,
+#btnLinha3,
+#btnCircular {
     border: 1px solid #ddd;
     border-radius: 10px;
+    cursor: pointer;
 }
 
-.linha1-color {
+#btnLinha1 {
     background-color: #E1FAAE;
 }
 
-.linha2-color {
+#btnLinha2 {
     background-color: #AFE6EA;
 }
 
-.linha3-color {
+#btnLinha3 {
     background-color: #AECFFF;
 }
 
-.circular-color {
+#btnCircular {
     background-color: #FFFFFF;
 }
 
