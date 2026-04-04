@@ -54,11 +54,12 @@ h1 {
 
 ul {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     padding-left: 10px;
     list-style: none;
     display: flex;
     gap: 5px;
+    flex-wrap: wrap;
 }
 
 li {
@@ -73,7 +74,8 @@ li {
 #btnLinha1,
 #btnLinha2,
 #btnLinha3,
-#btnCircular {
+#btnCircular,
+#btnSesi {
     border: 1px solid #ddd;
     border-radius: 10px;
     cursor: pointer;
@@ -95,6 +97,10 @@ li {
     background-color: #FFFFFF;
 }
 
+#btnSesi {
+    background-color: #ecf45c;
+}
+
 li img {
     width: 50px;
     height: auto;
@@ -107,7 +113,7 @@ h2 {
 
 .infor-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     padding: 10px;

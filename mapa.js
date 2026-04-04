@@ -78,6 +78,12 @@ document.getElementById('btnCircular').addEventListener('click', () => {
   carregarRota('rotas/circular.json', {
     color: 'orange',
     weight: 4,
-    dashArray: '8, 6'
+  });
+});
+
+document.getElementById('btnSesi').addEventListener('click', () => {
+  carregarRota('rotas/sesi.json', {
+    color: '#ecf45c',
+    weight: 4
   });
 });
