@@ -51,13 +51,47 @@ function carregarRota(url, estilo) {
 }
 
 // ===============================
+// FUNÇÃO PARA CARREGAR HORÁRIO
+// ===============================
+function mostrarHorarios(linha) {
+  fetch('horarios.json')
+    .then(res => res.json())
+    .then(horarios => {
+      const div = document.getElementById('conteudo-horarios');
+
+      if (linha === 'linha1') {
+        div.innerHTML = `
+          <p><strong>Linha 1</strong></p>
+          <p>Início: ${horarios.linha1.inicio}</p>
+          <p>Intervalo: ${horarios.linha1.intervalo}</p>
+        `;
+      }
+
+      if (linha === 'linha2') {
+        div.innerHTML = `
+          <p><strong>Linha 2</strong></p>
+          <p>Início: ${horarios.linha2.inicio}</p>
+          <p>Intervalo: ${horarios.linha2.intervalo}</p>
+        `;
+      }
+
+      if (linha === 'circular') {
+        div.innerHTML = `
+          <p><strong>Circular</strong></p>
+          <p>Início: ${horarios.circular.inicio}</p>
+          <p>Intervalo: ${horarios.circular.intervalo}</p>
+          <p>Final: ${horarios.circular.final}</p>
+        `;
+      }
+    });
+}
+
+// ===============================
 // BOTÕES
 // ===============================
 document.getElementById('btnLinha1').addEventListener('click', () => {
-  carregarRota('rotas/linha1.json', {
-    color: 'blue',
-    weight: 4
-  });
+  carregarRota('rotas/linha1.json', { color: 'blue', weight: 4 });
+  mostrarHorarios('linha1');
 });
 
 document.getElementById('btnLinha2').addEventListener('click', () => {
@@ -65,6 +99,7 @@ document.getElementById('btnLinha2').addEventListener('click', () => {
     color: 'red',
     weight: 4
   });
+  mostrarHorarios('linha2');
 });
 
 document.getElementById('btnLinha3').addEventListener('click', () => {
@@ -72,6 +107,7 @@ document.getElementById('btnLinha3').addEventListener('click', () => {
     color: 'green',
     weight: 4
   });
+  mostrarHorarios('linha3');
 });
 
 document.getElementById('btnCircular').addEventListener('click', () => {
@@ -79,6 +115,7 @@ document.getElementById('btnCircular').addEventListener('click', () => {
     color: 'orange',
     weight: 4,
   });
+  mostrarHorarios('circular');
 });
 
 document.getElementById('btnSesi').addEventListener('click', () => {
@@ -86,4 +123,5 @@ document.getElementById('btnSesi').addEventListener('click', () => {
     color: '#ecf45c',
     weight: 4
   });
+  mostrarHorarios('sesi');
 });

@@ -54,7 +54,7 @@ h1 {
 
 ul {
     display: flex;
-    justify-content: center;
+    justify-content: ce;
     padding-left: 10px;
     list-style: none;
     display: flex;
@@ -135,7 +135,8 @@ h3 {
 .l1-block,
 .l2-block,
 .l3-block,
-.circular-block {
+.circular-block,
+.sesi-block {
     display: flex;
     gap: 10px;
     padding: 5px;
