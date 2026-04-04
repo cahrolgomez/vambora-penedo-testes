@@ -90,7 +90,10 @@ function mostrarHorarios(linha) {
 // BOTÕES
 // ===============================
 document.getElementById('btnLinha1').addEventListener('click', () => {
-  carregarRota('rotas/linha1.json', { color: 'blue', weight: 4 });
+  carregarRota('rotas/linha1.json', { 
+    color: 'blue',
+    weight: 4 
+  });
   mostrarHorarios('linha1');
 });
 
@@ -120,7 +123,7 @@ document.getElementById('btnCircular').addEventListener('click', () => {
 
 document.getElementById('btnSesi').addEventListener('click', () => {
   carregarRota('rotas/sesi.json', {
-    color: '#ecf45c',
+    color: 'yellow',
     weight: 4
   });
   mostrarHorarios('sesi');
