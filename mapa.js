@@ -8,6 +8,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // ===============================
+// 🆕 ÍCONE PERSONALIZADO
+// ===============================
+const iconeParada = L.icon({
+  iconUrl: 'img/parada.png', // coloque sua imagem aqui
+  iconSize: [14, 14],
+  iconAnchor: [5, 14],
+  popupAnchor: [0, -14]
+});
+
+// ===============================
 // CONTROLE DE CAMADA ATIVA
 // ===============================
 let camadaAtiva = null;
@@ -32,7 +42,19 @@ function carregarRota(url, estilo) {
 
       // cria nova camada
       const camada = L.geoJSON(dados, {
-        style: estilo
+
+        // 🆕 AQUI MUDA OS PONTOS
+        pointToLayer: function (feature, latlng) {
+          return L.marker(latlng, { icon: iconeParada });
+        },
+
+        // 🆕 AQUI GARANTE QUE SÓ A LINHA RECEBE ESTILO
+        style: function (feature) {
+          if (feature.geometry.type === "LineString") {
+            return estilo;
+          }
+        }
+
       });
 
       // adiciona no mapa
