@@ -27,12 +27,7 @@ let camadaAtiva = null;
 // ===============================
 function carregarRota(url, estilo) {
   fetch(url)
-    .then(res => {
-      if (!res.ok) {
-        throw new Error("Erro ao carregar o arquivo: " + url);
-      }
-      return res.json();
-    })
+    .then(res => res.json())
     .then(dados => {
 
       // remove a rota anterior
@@ -66,10 +61,6 @@ function carregarRota(url, estilo) {
       // salva como ativa
       camadaAtiva = camada;
     })
-    .catch(err => {
-      console.error("Erro:", err);
-      alert("Erro ao carregar a rota. Veja o console (F12).");
-    });
 }
 
 // ===============================
