@@ -1,0 +1,164 @@
+{
+  "linha1": {
+    "info": {
+      "ponto_saida": "Vale do São Francisco",
+      "hora_inicial": "05:45",
+      "dias": "Segunda a Sábado",
+      "intervalo": "20 minutos"
+    },
+    "trajeto": {
+    "ida": [
+      "Conjunto Vale do São Francisco",
+      "Conjunto Marisa Letícia",
+      "Conjunto Dom Constantino",
+      "Rosete Andrade",
+      "Madre Espírito Santo",
+      "Rodovia Eng. Joaquim Gonçalves",
+      "Av. Cândido Toledo",
+      "Av. Getúlio Vargas",
+      "Centro Histórico",
+      "Av. Beira Rio",
+      "UFAL",
+      "Av. Duque de Caxias",
+      "Centro"
+    ],
+    "volta": [
+      "Centro",
+      "Av. Duque de Caxias",
+      "Av. Getúlio Vargas",
+      "Rodovia Eng. Joaquim Gonçalves",
+      "Madre Espírito Santo",
+      "Rosete Andrade",
+      "Conjunto Dom Constantino",
+      "Conjunto Marisa Letícia",
+      "Conjunto Vale do São Francisco"
+    ],
+    "observacao": ["Nenhuma observação para esta linha."]
+  }
+  },
+  "linha2": {
+    "info": {
+      "ponto_saida": "Cooperativa I",
+      "hora_inicial": "05:50",
+      "dias": "Segunda a Sábado",
+      "intervalo": "30 minutos"
+    },
+    "trajeto": {
+    "ida": [
+      "Cooperativa I",
+      "Conjunto Mata Atlântica",
+      "Vale do Marituba",
+      "Velho Chico II",
+      "Av. Guarany",
+      "Av. Antônio Cândido Toledo",
+      "Av. Getúlio Vargas",
+      "Centro Histórico",
+      "Av. Beira-Rio",
+      "UFAL",
+      "Av. Duque de Caxias"
+    ],
+    "volta": [
+      "Centro Histórico",
+      "Av. Getúlio Vargas",
+      "Rodovia Eng. Joaquim Gonçalves",
+      "Rua Aliança Liberal",
+      "Rua João Ramalho",
+      "Gabriel",
+      "Rua Nova",
+      "Rua da Esperança",
+      "Toca do Índio",
+      "Av. Guarany",
+      "Velho Chico II",
+      "Vale do Marituba",
+      "Conjunto Mata Atlântica",
+      "Cooperativa 1º Núcleo"
+    ],
+    "observacao": "Veículos que saem às 06:20, 07:20, 08:20, 09:20, 10:20, 11:20, 12:20, 13:20, 14:20, 15:20, 16:20 e 17:20 passam pelo bairro Santa Cecília (Matadouro)."
+  }
+  },
+  "linha3": {
+    "info": {
+      "ponto_saida": "Cooperativa I",
+      "hora_inicial": "06:00",
+      "dias": "Segunda a Sábado",
+      "intervalo": "30 minutos"
+    },
+    "trajeto": {
+    "ida": [
+      "Cooperativa 1º Núcleo",
+      "Conjunto Mata Atlântica",
+      "Velho Chico I",
+      "Cidade do Povo",
+      "Rua Belo Horizonte",
+      "Rua C",
+      "Rua da Dismoto",
+      "Rua Dom Pedro II",
+      "Rua Duque de Caxias",
+      "Av. Cândido Toledo",
+      "Av. Wanderley",
+      "Centro Histórico",
+      "Av. Beira Rio",
+      "UFAL",
+      "Av. Duque de Caxias"
+    ],
+    "volta": [
+      "Centro de Penedo",
+      "Av. Duque de Caxias",
+      "Av. Getúlio Vargas",
+      "Rodovia Eng. Joaquim Gonçalves",
+      "Trevo do Bom Jesus",
+      "Av. Cândido Toledo",
+      "Rua Guarany",
+      "Rua da Dismoto",
+      "Rua Belo Horizonte",
+      "Cidade do Povo",
+      "Mata Atlântica",
+      "Conjunto Mata Atlântica"
+    ],
+    "observacao": ["Nenhuma observação para esta linha."]
+  }
+   },
+  "circular": {
+    "info": {
+      "ponto_saida": "Comércio de Penedo",
+      "hora_inicial": "06:05",
+      "dias": "Domingo. Segunda a sábado apartir das 19:00",
+      "intervalo": "1 hora"
+    },
+    "trajeto": {
+      "ida": [
+        "Comércio de Penedo",
+        "Av. Getúlio Vargas",
+        "Rodovia Eng. Joaquim Gonçalves",
+        "Travessa Castro Alves",
+        "Rádio Grande Rio FM",
+        "Rua João Ramalho",
+        "Gabriel",
+        "Rua Nova",
+        "Supermercado Super 15",
+        "Rua da Aurora",
+        "Rodovia Eng. Joaquim Gonçalves",
+        "Rotatória do Bom Jesus",
+        "Dismoto",
+        "Bairro Dr. Raimundo Marinho",
+        "Conjunto São José",
+        "Vale do São Francisco",
+        "Rosete Andrade"
+      ],
+      "volta": [
+        "Conjunto Dom Constantino",
+        "Rodovia Eng. Joaquim Gonçalves",
+        "Rotatória do Bom Jesus",
+        "Av. Antônio Cândido Toledo",
+        "Av. Wanderley",
+        "Super 15",
+        "Rua Nova",
+        "Rua João Ramalho",
+        "Av. Getúlio Vargas",
+        "Comércio de Penedo"
+      ],
+      "observacao": ["Nenhuma observação para esta linha."]
+    }
+  }
+}
+

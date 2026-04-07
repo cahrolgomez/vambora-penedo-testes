@@ -132,13 +132,8 @@ h3 {
     margin-bottom: 10px
 }
 
-.l1-block,
-.l2-block,
-.l3-block,
-.circular-block,
-.sesi-block {
-    display: flex;
-    gap: 10px;
+.linhas-block {
+    display: block;
     padding: 5px;
 }
 
@@ -147,6 +142,7 @@ h3 {
     padding: 15px;
     color: #FFFFFF;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .l-end {

@@ -75,36 +75,31 @@ function carregarRota(url, estilo) {
 // ===============================
 // FUNÇÃO PARA CARREGAR HORÁRIO
 // ===============================
-function mostrarHorarios(linha) {
-  fetch('horarios.json')
+function mostrarInfoLinha(linha) {
+  fetch('linhas.json')
     .then(res => res.json())
-    .then(horarios => {
-      const div = document.getElementById('conteudo-horarios');
+    .then(dados => {
+      const infoDiv = document.getElementById('info-linha');
+      const trajetoDiv = document.getElementById('trajeto-linha');
 
-      if (linha === 'linha1') {
-        div.innerHTML = `
-          <p><strong>Linha 1</strong></p>
-          <p>Início: ${horarios.linha1.inicio}</p>
-          <p>Intervalo: ${horarios.linha1.intervalo}</p>
-        `;
-      }
+      const linhaData = dados[linha];
 
-      if (linha === 'linha2') {
-        div.innerHTML = `
-          <p><strong>Linha 2</strong></p>
-          <p>Início: ${horarios.linha2.inicio}</p>
-          <p>Intervalo: ${horarios.linha2.intervalo}</p>
-        `;
-      }
+      // Informações principais
+      infoDiv.innerHTML = `
+        <h3>${linha.toUpperCase()} - Informações</h3>
+        <p><strong>Ponto de saída:</strong> ${linhaData.info.ponto_saida}</p>
+        <p><strong>Hora inicial:</strong> ${linhaData.info.hora_inicial}</p>
+        <p><strong>Dias:</strong> ${linhaData.info.dias}</p>
+        <p><strong>Intervalo:</strong> ${linhaData.info.intervalo}</p>
+      `;
 
-      if (linha === 'circular') {
-        div.innerHTML = `
-          <p><strong>Circular</strong></p>
-          <p>Início: ${horarios.circular.inicio}</p>
-          <p>Intervalo: ${horarios.circular.intervalo}</p>
-          <p>Final: ${horarios.circular.final}</p>
-        `;
-      }
+      // Descrição do trajeto
+      trajetoDiv.innerHTML = `
+        <h3>Trajeto</h3>
+        <p><strong>Ida:</strong> ${linhaData.trajeto.ida.join(' → ')}</p>
+        <p><strong>Volta:</strong> ${linhaData.trajeto.volta.join(' → ')}</p>
+        <p><strong>Observação:</strong> ${linhaData.trajeto.observacao}</p>
+      `;
     });
 }
 
@@ -116,7 +111,7 @@ document.getElementById('btnLinha1').addEventListener('click', () => {
     color: 'blue',
     weight: 4 
   });
-  mostrarHorarios('linha1');
+  mostrarInfoLinha('linha1'); // falta adicionar os dados reais da volta do trajeto no json
 });
 
 document.getElementById('btnLinha2').addEventListener('click', () => {
@@ -124,7 +119,7 @@ document.getElementById('btnLinha2').addEventListener('click', () => {
     color: 'red',
     weight: 4
   });
-  mostrarHorarios('linha2');
+  mostrarInfoLinha('linha2');
 });
 
 document.getElementById('btnLinha3').addEventListener('click', () => {
@@ -132,7 +127,7 @@ document.getElementById('btnLinha3').addEventListener('click', () => {
     color: 'green',
     weight: 4
   });
-  mostrarHorarios('linha3');
+  mostrarInfoLinha('linha3');
 });
 
 document.getElementById('btnCircular').addEventListener('click', () => {
@@ -140,7 +135,7 @@ document.getElementById('btnCircular').addEventListener('click', () => {
     color: 'orange',
     weight: 4,
   });
-  mostrarHorarios('circular');
+  mostrarInfoLinha('circular');
 });
 
 document.getElementById('btnSesi').addEventListener('click', () => {
@@ -148,5 +143,5 @@ document.getElementById('btnSesi').addEventListener('click', () => {
     color: 'yellow',
     weight: 4
   });
-  mostrarHorarios('sesi');
+  mostrarInfoLinha('sesi'); //falta adicionar a linha sesi no json
 });

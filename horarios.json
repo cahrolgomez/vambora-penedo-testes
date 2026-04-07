@@ -1,7 +1,0 @@
-{
-  "linha1": { "inicio": "05:45", "intervalo": "30min" },
-  "linha2": { "inicio": "05:50", "intervalo": "30min" },
-  "linha3": { "inicio": "06:00", "intervalo": "30min" },
-  "circular": {"inicio": "19:05", "intervalo": "1 hora", "final": "22:05"},
-  "Sesi": { "inicio": "06:30", "intervalo": "1 hora" } 
-}
