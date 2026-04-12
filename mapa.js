@@ -102,7 +102,7 @@ document.getElementById('btnLinha1').addEventListener('click', () => {
     color: 'blue',
     weight: 4 
   });
-  mostrarInfoLinha('linha1'); // falta adicionar os dados reais da volta do trajeto no json
+  mostrarInfoLinha('linha1');
 });
 
 document.getElementById('btnLinha2').addEventListener('click', () => {
@@ -134,5 +134,5 @@ document.getElementById('btnSesi').addEventListener('click', () => {
     color: 'yellow',
     weight: 4
   });
-  mostrarInfoLinha('sesi'); //falta adicionar a linha sesi no json
+  mostrarInfoLinha('sesi');
 });

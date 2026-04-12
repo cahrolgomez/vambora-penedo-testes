@@ -23,15 +23,11 @@
       "Centro"
     ],
     "volta": [
-      "Centro",
-      "Av. Duque de Caxias",
-      "Av. Getúlio Vargas",
       "Rodovia Eng. Joaquim Gonçalves",
-      "Madre Espírito Santo",
-      "Rosete Andrade",
-      "Conjunto Dom Constantino",
-      "Conjunto Marisa Letícia",
-      "Conjunto Vale do São Francisco"
+      "Av. Antônio Cândido Toledo",
+      "Av. Wanderley",
+      "Av. Getúlio Vargas",
+      "Comércio de Penedo"
     ],
     "observacao": ["Nenhuma observação para esta linha."]
   }
@@ -159,6 +155,44 @@
       ],
       "observacao": ["Nenhuma observação para esta linha."]
     }
+  },
+  "sesi": {
+    "info": {
+      "ponto_saida": "SESI",
+      "hora_inicial": "06:35",
+      "dias": "Segunda a Sábado",
+      "intervalo": "40 minutos"
+    },
+  "trajeto": {
+    "ida": [
+      "Centro Histórico",
+      "Rua Siqueira Campos",
+      "Rua João Pessoa",
+      "Av. Getúlio Vargas",
+      "Av. Antônio Cândido Penedo",
+      "SESI",
+      "Av. Brasil (Santa Isabel)",
+      "Cacimbinha",
+      "Estrada do Marizeiro",
+      "Santa",
+      "Rodovia Hélio Nogueira Lopes",
+      "SESI",
+      "Estrada para Campo Redondo",
+      "Rua São Judas",
+      "Rua São João"
+    ],
+    "volta": [
+      "Rodovia Hélio Nogueira Lopes",
+      "Av. Wanderley",
+      "Av. Getúlio Vargas",
+      "Rua Rio Branco",
+      "Rua Fernandes Barros",
+      "Rua Damaso do Monte",
+      "Centro Histórico"
+    ],
+    "observacao": "O primeiro trajeto sai do SESI às 06:35. A partir do segundo trajeto, o percurso padrão inicia às 07:10 saindo do Centro Histórico."
   }
+}
+
 }
 
